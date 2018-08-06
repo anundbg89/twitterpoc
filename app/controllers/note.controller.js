@@ -8,10 +8,10 @@ exports.getTweet=(req,res)=>{
     var Twit = require('twit')
     var twitterStream = [];
     var client = new Twit({
-      consumer_key: '5rJqrIdkg7DZEypqC1htVH718',
-      consumer_secret: 'AXqOvaURBCkrmVe2Xtc48eXOlCaJUXCgMrVTaLvJEAIYuNhHzY',
-      access_token: '797128020612022272-Xb0tZXyy9vgbUUfzOEYWqVUfXvOxej0',
-      access_token_secret: 'iEyWcEAgxM6JBwT8Ghh6PIWrigd1eUOgj6MO0MFpLGZ2o'
+      consumer_key: '',
+      consumer_secret: '',
+      access_token: '',
+      access_token_secret: ''
     });
     client.get('search/tweets', { q: '#'+req.params.noteId+' since:'+ req.params.Dates, count: 10 }, function(err, reply) {
         //console.log(reply.statuses[0].quoted_status);
